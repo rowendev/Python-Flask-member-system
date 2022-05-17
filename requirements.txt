@@ -1,4 +1,13 @@
 Flask
 gunicorn
+beautifulsoup4
 certifi
+click
+colorama
+dnspython
+itsdangerous
+Jinja2
+MarkupSafe
 pymongo
+soupsieve
+Werkzeug
