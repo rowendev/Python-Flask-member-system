@@ -83,5 +83,7 @@ def error():
     message = request.args.get('msg', '發生錯誤,請聯繫客服')
     return render_template('error.html', message=message)
 
-app.run(port=3000)
+#如果以主程式執行
+if __name__ == '__main__': 
+    app.run() #立刻啟動伺服器 指定埠號3000
 
