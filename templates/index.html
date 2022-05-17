@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>會員系統</title>
+    <style>
+        h2 {
+            position: absolute;
+            left: 50%;
+            top: 1%;
+            transform: translate(-50%, -50%);
+        }
+        h3 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .s {
+            position: absolute;
+            left: 50%;
+            top: 7%;
+            transform: translate(-50%, -50%);
+        }
+        .container {
+            width: 500px;
+            height: 500px;
+            /* background-color: orange; */
+            
+            
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            
+            /* display: flex;
+            justify-content: center;
+            align-items: center; */
+            
+
+        }
+        .con2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .shadowBtn {
+            width: 100px;
+            height: 50px;
+            border: 2px solid white;
+            border-radius: 10px;
+            background-color: transparent;
+            color: white;
+            position: relative;
+            /* display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: aquamarine; */
+        }
+        .shadowBtn:hover {
+            background-color: white;
+            color: black;
+            transition: 1s ease;
+        }
+        .shadowBtn::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50px;
+            background: transparent;
+            height: 50%;
+            width: 100%;
+            transform: perspective(lem)
+            rotateX(40deg) scale(1,0.35);
+            filter: blur(8px);
+            transition: 1s ease;
+        }
+        .shadowBtn:hover::before {
+            background: white;
+            top: 70px;
+        }
+    </style>
+</head>
+<body bgcolor="black" style="color:white">
+    <h2>會員系統首頁</h2>
+    <div class="s">welcome to the website</div>
+    <div class="container">                     
+        <h3>會員註冊</h3>
+        <div class="con2">
+            <form action="/signup" method="POST">
+                <div style="text-align:right; vertical-align:middle">使用者名稱 <input type="text" name="username" /></div><br/>
+                <div style="text-align:right; vertical-align:middle">電子郵件 <input type="text" name="useremail" /></div><br/>
+                <div style="text-align:right; vertical-align:middle">密碼 <input type="password" name="password" /></div><br/><br/>
+                <div style="text-align:center; vertical-align:middle">
+                    <button class="shadowBtn">註冊</button><br/><br/><br/><br/><br/><br/><br/>
+                </div>
+            </form>
+        </div>
+
+        <h3>會員登入</h3>
+        <div class="con2">
+            <form action="/signin" method="POST">
+                <div style="text-align:right; vertical-align:middle">電子郵件 <input type="text" name="useremail" /></div><br/>
+                <div style="text-align:right; vertical-align:middle">密碼 <input type="password" name="password" /></div><br/><br/>
+                <div style="text-align:center; vertical-align:middle">
+                    <button class="shadowBtn">登入</button>
+                </div>
+            </form>
+        </div>            
+    </div>
+</body>
+</html>
