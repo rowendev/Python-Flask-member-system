@@ -37,22 +37,28 @@ def signup():
     username = request.form['username']
     email = request.form['useremail']
     password = request.form['password']
-    if (username or email or password == ''):
-        return redirect('/error?msg=請填寫完整資料')
+    print('username:',username, 'email:',email, 'password:',password)
     # handle data
-    collection = db.user
-    result = collection.find_one({
-        'email':email
-    })
-    if result != None:
-        return redirect('/error?msg=this email already exists')
-    
-    collection.insert_one({
-        'username':username,
-        'email':email,
-        'password':password
-    })
-    return redirect('/')
+    if (username == ''):
+        return redirect('/error?msg=使用者名稱未填寫')
+    elif(email == ''):
+        return redirect('/error?msg=email未填寫')
+    elif(password == ''):
+        return redirect('/error?msg=密碼未填寫')
+    else:
+        collection = db.user
+        result = collection.find_one({
+            'email':email
+        })
+        if result != None:
+            return redirect('/error?msg=this email already exists')
+        
+        collection.insert_one({
+            'username':username,
+            'email':email,
+            'password':password
+        })
+        return redirect('/')
 
 @app.route('/signin', methods=['POST'])
 def signin():
