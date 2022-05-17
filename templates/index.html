@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <title>會員系統</title>
     <style>
         h2 {
@@ -18,10 +19,9 @@
             align-items: center;
         }
         .s {
-            position: absolute;
-            left: 50%;
-            top: 7%;
-            transform: translate(-50%, -50%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
         .container {
             width: 500px;
@@ -44,6 +44,12 @@
             display: flex;
             justify-content: center;
             align-items: center;
+        }
+        .con3 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
         }
         .shadowBtn {
             width: 100px;
@@ -80,11 +86,44 @@
             background: white;
             top: 70px;
         }
+        .icon {
+            text-decoration: none;
+            width: 50px;
+            height: 50px;
+            background-color: #cb611a;
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 
+            5px 5px 10px #ad5216,
+            -5px -5px 10px #e9701e;
+        }
+        .icon:focus {
+            animation: shadow .15s
+            ease-in-out;
+        }
+        @keyframes shadow {
+            0% {
+                box-shadow: 
+                inset 5px 5px 10px #ad5216
+                inset 5px -5px 10px #e9701e;
+            }
+            100% {
+                box-shadow: none;
+            }
+        }
+        
     </style>
 </head>
-<body bgcolor="black" style="color:white">
-    <h2>會員系統首頁</h2>
-    <div class="s">welcome to the website</div>
+<body bgcolor= "#cb611a" style="color:white">
+    <!-- <h2>會員系統首頁</h2>
+    <div class="s">welcome to the website</div> -->
+    <form oninput="result.value=parseInt(b.value)">
+        <input type="range" id="b" name="b" value="50" /> 
+        <output name="result" for="b">50</output>
+    </form>
     <div class="container">                     
         <h3>會員註冊</h3>
         <div class="con2">
@@ -108,6 +147,11 @@
                 </div>
             </form>
         </div>            
+    </div>
+    <div class="con3">
+        <a href="https://www.instagram.com/_lxxch/" class="icon" ><i class="ri-instagram-line" ></i></a>
+        <a href="#" class="icon"><i class="ri-facebook-line"></i></a>
+        <a href="#" class="icon"><i class="ri-github-line"></i></a>
     </div>
 </body>
 </html>

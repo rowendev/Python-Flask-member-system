@@ -21,6 +21,9 @@ app.secret_key = 'any string but secret'
 # route
 @app.route('/')
 def index():
+    
+    usercolor = request.args.get('result')
+    print('color-value=',usercolor)
     return render_template('index.html')
 
 @app.route('/member')
