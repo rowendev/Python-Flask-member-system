@@ -1,0 +1,20 @@
+{
+	"folders": [
+		{
+			"path": "..\\..\\myweb"
+		},
+		{
+			"path": "..\\..\\py4e"
+		},
+		{
+			"path": "..\\..\\mycrawler"
+		},
+		{
+			"path": "..\\..\\handtracking"
+		},
+		{
+			"path": ".."
+		}
+	],
+	"settings": {}
+}
