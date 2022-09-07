@@ -4,7 +4,7 @@ import re
 from urllib import request
 import pymongo
 import certifi
-client = pymongo.MongoClient("mongodb+srv://root:root123@mycluster.9yv0f.mongodb.net/myFirstDatabase?retryWrites=true&w=majority", tlsCAFile=certifi.where())
+client = pymongo.MongoClient("###", tlsCAFile=certifi.where())
 db = client.member_system
 print('*** database connection success ***')
 
